@@ -3,6 +3,6 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      board: seeed_xiao_ble
-      shield: totem_left totem_right
+    env:
+      BOARD: seeed_xiao_ble
+      SHIELD: totem_left totem_right
