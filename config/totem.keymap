@@ -73,10 +73,10 @@ label= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp Q       &kp W       &kp E       &mt LALT &kp R   &kp T           &kp Y       &kp U       &kp I       &kp O       &kp SEMI
-                &kp A       &kp S  &mt LSHFT &kp D &mt  LCTRL &kp F      &kp G           &kp H       &mt LSHFT &kp J &mt RSHFT &kp K &mt RALT &kp L  &mt RGUI &kp SEMI
+                &kp Q       &kp W       &kp E       &mt LALT R   &kp T           &kp Y       &kp U       &kp I       &kp O       &kp SEMI
+                &kp A       &kp S     &mt LSHFT D  &mt LCTRL F   &kp G           &kp H       &mt LSHFT J &mt RSHFT K &mt RALT L  &mt RGUI SEMI
     &kp GRAVE   &kp Z       &kp X       &kp C       &kp V        &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
-                                        &kp LGUI    &lt NAV &kp TAB  &kp SPACE       &kp RET     &lt SYM &kp APOS  &kp BSPC
+                                        &kp LGUI    &lt NAV TAB  &kp SPACE       &kp RET     &lt SYM APOS  &kp BSPC
                         >;
                 };
 
