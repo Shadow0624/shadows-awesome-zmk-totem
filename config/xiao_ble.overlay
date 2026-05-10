@@ -1,0 +1,17 @@
+/ {
+    pwmleds {
+        compatible = "pwm-leds";
+
+        led_red: red_led {
+            pwms = <&pwm0 26 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+        };
+
+        led_green: green_led {
+            pwms = <&pwm0 30 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+        };
+
+        led_blue: blue_led {
+            pwms = <&pwm0 6 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+        };
+    };
+};
