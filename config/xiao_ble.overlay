@@ -17,11 +17,13 @@
             label = "LED_BLUE";
         };
     };
-    behaviors {
-        blue_on: blue_on {
-            compatible = "zmk,behavior-gpio-toggle";
-            #binding-cells = <0>;
-            gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+
+    zmk_indicators {
+        compatible = "zmk,led-indicators";
+
+        caps_lock {
+            label = "CAPS";
+            led = <&led_blue>;
         };
     };
 };

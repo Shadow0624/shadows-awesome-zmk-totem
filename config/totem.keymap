@@ -114,21 +114,21 @@ label= "BASE"                              ;
 label= "NAVI"                              ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃           ┃     7     ┃      8    ┃     9     ┃           ┃   ┃     HOME  ┃    END    ┃     UP    ┃           ┃           ┃
+//             ┃           ┃     1     ┃      2    ┃     3     ┃           ┃   ┃     HOME  ┃    END    ┃     UP    ┃           ┃           ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃           ┃     4     ┃     5     ┃     6     ┃           ┃   ┃    MENU   ┃   LEFT    ┃   DOWN    ┃   RIGHT   ┃           ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃     0     ┃     1     ┃     2     ┃     3     ┃    CAPS   ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
+// ┃    CAPS   ┃           ┃     7     ┃     8     ┃     9     ┃     0     ┃   ┃           ┃           ┃           ┃           ┃           ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃           ┃           ┃   ┃    ADJ    ┃           ┃           ┃
+//                                     ┃           ┃           ┃           ┃   ┃    ADJ    ┃           ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &none     &kp KP_N7   &kp KP_N8    &kp KP_N9   &none        &kp HOME    &kp END     &kp UP     &none       &none
+                &none     &kp KP_N1   &kp KP_N2    &kp KP_N3   &none        &kp HOME    &kp END     &kp UP     &none       &none
                 &none     &kp KP_N4   &kp KP_N5    &kp KP_N6   &none        &kp K_APP   &kp LEFT    &kp DOWN   &kp RIGHT   &none
-    &none       &kp KP_N0 &kp KP_N1   &kp KP_N2    &kp KP_N3   &kp CAPS     &none       &none       &none      &none       &none    &none
-                                      &none        &none       &none        &mo ADJ     &none       &none
+    &kp CAPS    &none     &kp KP_N7   &kp KP_N8    &kp KP_N9   &kp KP_N0    &none       &none       &none      &none       &none    &none
+                                      &none        &none       &none        &mo ADJ     &none       &kp DEL
                         >;
                 };
 
@@ -146,7 +146,7 @@ label= "SYM"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃     -     ┃     +     ┃     *     ┃     /     ┃     F2    ┃   ┃     _     ┃     [     ┃     ]     ┃     F4    ┃     F5    ┃     F12   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃    Pass   ┃    GIF    ┃    MED    ┃   ┃    ENT    ┃           ┃           ┃
+//                                     ┃    Pass   ┃    GIF    ┃    MED    ┃   ┃    ENT    ┃           ┃    DEL    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -154,7 +154,7 @@ label= "SYM"                               ;
                 &kp EXCL    &kp AT      &kp HASH    &kp PSCRN   &kp PRCNT       &kp AMPS    &kp LPAR    &kp RPAR   &kp EQUAL     &kp DQT
                 &kp CARET   &kp AMPS    &kp STAR    &kp DLLR    &kp GRAVE       &kp PIPE    &kp LBRC    &kp RBRC   &kp LT        &kp GT 
     &none      &kp KP_MINUS &kp PLUS    &kp STAR    &kp FSLH    &kp F2          &kp UNDER   &kp LBKT    &kp RBKT   &kp F4        &kp F5     &kp F12
-                                        &pass       &gif        &mo MED         &kp RET     &none       &blue_on
+                                        &pass       &gif        &mo MED         &kp RET     &none       &kp DEL
                         >;
                 };
 
