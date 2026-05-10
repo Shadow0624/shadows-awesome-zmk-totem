@@ -41,13 +41,13 @@
             combo_copy {
                 timeout-ms = <50>;
                 key-positions = <23 24>;   // C + V
-                bindings = <&kp LC(C)>;
+                bindings = <&kp LC(V)>;
             };
 
             combo_paste {
                 timeout-ms = <50>;
                 key-positions = <21 22>;   // Z + X
-                bindings = <&kp LC(V)>;
+                bindings = <&kp LC(C)>;
             };
     };
 
