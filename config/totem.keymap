@@ -26,7 +26,7 @@
   quick-tap-ms = <100>;
   global-quick-tap;
   flavor = "tap-preferred";
-  tapping-term-ms = <170>;
+  tapping-term-ms = <200>;
 };
 
 / {
@@ -36,6 +36,18 @@
                 timeout-ms = <50>;
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
+            };
+
+            combo_copy {
+                timeout-ms = <50>;
+                key-positions = <23 24>;   // C + V
+                bindings = <&kp LC(C)>;
+            };
+
+            combo_paste {
+                timeout-ms = <50>;
+                key-positions = <21 22>;   // Z + X
+                bindings = <&kp LC(V)>;
             };
     };
 
@@ -49,6 +61,20 @@
                 , <&macro_tap &kp N2>
                 , <&macro_release &kp LSHFT>
                 , <&macro_tap &kp G &kp I &kp F>
+                ;
+        };
+        pass: pass {
+            label = "Pass";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp S>
+                , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp H &kp A &kp D &kp O &kp W &kp N4 &kp N2>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp N2>
+                , <&macro_release &kp LSHFT>
                 ;
         };
     };
@@ -120,7 +146,7 @@ label= "SYM"                               ;
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃           ┃     -     ┃     +     ┃     *     ┃     /     ┃     F2    ┃   ┃     _     ┃     [     ┃     ]     ┃     F4    ┃     F5    ┃     F12   ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-//                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃    ENT    ┃           ┃           ┃
+//                                     ┃    Pass   ┃    GIF    ┃    MED    ┃   ┃    ENT    ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
@@ -128,7 +154,7 @@ label= "SYM"                               ;
                 &kp EXCL    &kp AT      &kp HASH    &kp PSCRN   &kp PRCNT       &kp AMPS    &kp LPAR    &kp RPAR   &kp EQUAL     &kp DQT
                 &kp CARET   &kp AMPS    &kp STAR    &kp DLLR    &kp GRAVE       &kp PIPE    &kp LBRC    &kp RBRC   &kp LT        &kp GT 
     &none      &kp KP_MINUS &kp EQUAL   &kp STAR    &kp FSLH    &kp F2          &kp UNDER   &kp LBKT    &kp RBKT   &kp F4        &kp F5     &kp F12
-                                        &none       &gif        &mo MED         &kp RET     &none       &none
+                                        &pass       &gif        &mo MED         &kp RET     &none       &none
                         >;
                 };
 
