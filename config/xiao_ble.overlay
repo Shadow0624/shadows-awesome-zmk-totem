@@ -1,17 +1,20 @@
 / {
-    pwmleds {
-        compatible = "pwm-leds";
+    leds {
+        compatible = "gpio-leds";
 
-        led_red: red_led {
-            pwms = <&pwm0 26 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+        led_red: led_red {
+            gpios = <&gpio0 26 GPIO_ACTIVE_LOW>;
+            label = "LED_RED";
         };
 
-        led_green: green_led {
-            pwms = <&pwm0 30 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+        led_green: led_green {
+            gpios = <&gpio0 30 GPIO_ACTIVE_LOW>;
+            label = "LED_GREEN";
         };
 
-        led_blue: blue_led {
-            pwms = <&pwm0 6 PWM_MSEC(20) PWM_POLARITY_INVERTED>;
+        led_blue: led_blue {
+            gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+            label = "LED_BLUE";
         };
     };
 };
